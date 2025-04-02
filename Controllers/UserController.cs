@@ -7,11 +7,6 @@ namespace WebApplicationPR.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        [HttpGet("test")]
-        public IActionResult Test()
-        {
-            return Ok("UserService работает!");
-        }
         
         [HttpGet]
         public ActionResult<IEnumerable<User>> GetUsers()
