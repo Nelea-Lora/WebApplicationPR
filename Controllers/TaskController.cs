@@ -34,7 +34,7 @@ namespace WebApplicationPR.Controllers
 
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<TaskModel>> GetTask(int id)
+        public async Task<ActionResult<TaskModel>> GetTask(Guid id)
         {
             var response = await _httpClient.CreateClient("TaskService").GetAsync($"{id}");
             var task = await response.Content.ReadFromJsonAsync<TaskModel>();
